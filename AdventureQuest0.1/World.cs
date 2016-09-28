@@ -12,12 +12,10 @@ namespace AdventureQuest0._1
         public World()
         {
             rooms = new List<Room>();
-            Room r1 = new Room("Spawn", "Dette er starten på et eventyr.");
-            Room r2 = new Room("Bambi hjørnet", "Vent 8 sekunder med at bevæge dig videre, for ikke at dø.");
-            Room r3 = new Room("De vilde kaniners hule", "Dette er et rum fyldt med vrede og vilde kaniner.");
-            Room r4 = new Room("Spooky scary skeletons", "Hvis du dør her, bliver du til et spooky scary skeleton.");
-            Room r5 = new Room("Sasquatch dungeon", "Pas på den farlige sasquatch ikke dræber dig!");
-            Room r6 = new Room()
+            Room r1 = new Room("Mark", "En stor og grøn mark med masser af smukke planter og dyr");
+            Room r2 = new Room("Hus", "Indgangen til et mørkt hus");
+            Room r3 = new Room("Mørkt rum", "Et meget mørkt rum");
+            Room r4 = new Room("Fangekælder", "Uhyggeligt rum med masser af sjove lyde, du kan ikke se noget i dette rum");
 
             rooms.Add(r1);
             rooms.Add(r2);
