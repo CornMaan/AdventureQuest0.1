@@ -16,7 +16,7 @@ namespace AdventureQuest0._1
             Room r2 = new Room("Hus", "Indgangen til et mørkt hus");
             Room r3 = new Room("Mørkt rum", "Et meget mørkt rum");
             Room r4 = new Room("Fangekælder", "Uhyggeligt rum med masser af sjove lyde, du kan ikke se noget i dette rum");
-            Room r5 = new Room("Gyldent rum", "Et gyldent rum med en kiste midt i det hele")
+            Room r5 = new Room("Gyldent rum", "Et gyldent rum med en kiste midt i det hele");
 
             rooms.Add(r1);
             rooms.Add(r2);
