@@ -16,6 +16,12 @@ namespace AdventureQuest0._1
         public void AddItem(Item i)
         {
             inventory.Add(i);
+            switch (curentRoom)
+            {
+                case "bambiRoom":
+                    Console.WriteLine("Du fandt et rensdyr horn under isen");
+                    break;
+            }
         }
     }
 
