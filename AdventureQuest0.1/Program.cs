@@ -10,7 +10,6 @@ namespace AdventureQuest0._1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Test");
             World w = new World();
             w.PrintWorld();
             Console.ReadLine();
