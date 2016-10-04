@@ -22,7 +22,7 @@ namespace AdventureQuest0._1
             Room r8 = new Room("De lillae blomsters eng", "Vent her og få en kiste.");
             Room r9 = new Room("Preperation room", "Du har nu fuldt liv.");
             Room r10 = new Room("Blue eyes white dragon!", "Slå dragen ihjel og kom videre til næste level!");
-            Room r11 = new Room("Room of death", "Du dør.");
+            Room r11 = new Room("Room of death", "GÅ HERIND DRENGE!");
             Room r12 = new Room("Item of mass destruction", "Du bliver uovervindelig.");
             Room r13 = new Room("Teleport til level 2", "Du er nu igennem første level.");
             Room r14 = new Room("Spawn 2", "Starten af andet level.");
@@ -33,6 +33,7 @@ namespace AdventureQuest0._1
             Room r19 = new Room("Asylcentret", "Her passer staten på dig. Her hygger alle asylansøgerene sig på statens regning. Du får fuldt liv.");
             Room r20 = new Room("Triwizard maze", "Kom igennem denne labyrint og kom videre til den sidset boss!");
             Room r21 = new Room("Mufasa", "Dette er den afsluttende kamp! Slå løven ihjel og skub ham udover klippeskrænten!");
+            Room r22 = new Room("Hemmeligt rum", "Mystery shit");
 
             rooms.Add(r1);
             rooms.Add(r2);
@@ -54,12 +55,14 @@ namespace AdventureQuest0._1
             rooms.Add(r19);
             rooms.Add(r20);
             rooms.Add(r21);
+            rooms.Add(r22);
 
 
 
             r1.AddEast(r2);
             r1.AddWest(r4);
             r1.AddNorth(r3);
+            r1.AddSouth(r22);
             r2.AddEast(r5);
             r3.AddNorth(r6);
             r4.AddNorth(r7);
