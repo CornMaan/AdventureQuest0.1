@@ -53,7 +53,7 @@ namespace AdventureQuest0._1
 
         public void ListItems()
         {
-            if(items.Count > 0)
+            if (items.Count > 0)
             {
                 Console.WriteLine("Du ser : ");
                 foreach (Item i in items)
@@ -94,4 +94,5 @@ namespace AdventureQuest0._1
             }
 
         }
+    }
 }
