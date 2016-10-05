@@ -16,7 +16,6 @@ namespace AdventureQuest0._1
         public string beskrivelse;
         public List<Item> items;
         public List<Mob> mobs;
-        public List<Mob> fjernder = new List<Mob>();
         public Room(string navn, string beskrivelse)
         {
             this.navn = navn;
@@ -40,7 +39,7 @@ namespace AdventureQuest0._1
         {
             east = r;
         }
-        public void Listmobs()
+        public void ListMobs()
         {
             if (mobs.Count > 0)
             {
@@ -94,10 +93,6 @@ namespace AdventureQuest0._1
                 this.difficulty = difficulty;
             }
 
-        }
-        public void AddMob(Mob i)
-        {
-            fjernder.Add(i);
         }
     }
 }

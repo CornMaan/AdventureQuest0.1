@@ -37,8 +37,6 @@ namespace AdventureQuest0._1
 
             Item i1 = new Item("Dagger", 32);
             r2.AddItem(i1);
-
-            
             
             rooms.Add(r1);
             rooms.Add(r2);
