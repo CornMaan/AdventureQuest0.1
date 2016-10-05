@@ -17,70 +17,21 @@ namespace AdventureQuest0._1
 
         public void Addclass(Klasse c)
         {
-            person.Add(c);
-            switch (curentRoom)
-            {
-                case "bambi hjørnet":
-                    Console.WriteLine("Du fandt et rensdyr horn under isen, som forvandler dig til et rensdyr");
-                    navn = "rensdyr";
-                    break;
-                case "De ensomme spøgelser":
-                    Console.WriteLine("Efter du dør, bliver du forvandlet til et Ensomt spøgelse");
-
-                    break;
-                case "Spooky scary skeletons":
-                    Console.WriteLine("Efter du dør, bliver du forvandlet til et SSC");
-
-                    break;
-                case "Dream room":
-                    Console.WriteLine("Du finder en staff of trickery, som forvandler dig til en warlock");
-
-                    break;
-
-            }
         }
         public void AddItem(Item i)
         {
             inventory.Add(i);
-            if(currentRoom.Equals("Ulvens sovekammer") && person.Equals("rensdyr"))
-            {
-                Console.WriteLine("Du fandt nogle store tænder");
-
-            }
-            else if(currentRoom.Equals("Ulvens sovekammer") && person.Equals("Ensomt spøgelser"))
-            {
-                Console.WriteLine("Du fandt et lagn, som du tager hen over hovedet");
-
-            }
-            else if(currentRoom.Equals("Ulvens sovekammer") && person.Equals("Warlock"))
-            {
-                Console.WriteLine("Du fandt en uendelig mængde af sovepiller som du fra nu af altid bruge i kampen mod fjender");
-
-            }
-            else if(currentRoom.Equals("Ulvens sovekammer") && person.Equals("SSC"))
-            {
-                Console.WriteLine("Du fandt en rusten trumpet som du bruger du kan bruge til at skræmme fjender i kampen");
-
-            }
-            else if(currentRoom.Equals("Peterplys og co."))
-            {
-                Console.WriteLine("Du samlede en Honning krukke op fra peterplys lig. Honning krukken healer dig for 20hp når du bruger den");
-
-            }
-            else
-            {
-                Console.WriteLine("Der er gået noget galt hvis det her står her!");
-            }
         }
     }
 
     public class Item
     {
         public string navn;
-        public Item(string navn)
+        public int itempower;
+        public Item(string navn, int itempower)
         {
             this.navn = navn;
-            itempower =
+            this.itempower = itempower;
         }
     }
     public class Klasse
