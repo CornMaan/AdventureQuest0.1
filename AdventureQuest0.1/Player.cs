@@ -12,7 +12,6 @@ namespace AdventureQuest0._1
         public int hp;
         public int power;
         public Room currentRoom;
-        public List<Klasse> person = new List<Klasse>();
         public List<Item> inventory = new List<Item>(); 
 
         public void Addclass(Klasse c)

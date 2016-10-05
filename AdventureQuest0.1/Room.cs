@@ -15,6 +15,7 @@ namespace AdventureQuest0._1
         public string navn;
         public string beskrivelse;
         public List<Item> items;
+        public List<mob> mobs;
         public Room(string navn, string beskrivelse)
         {
             this.navn = navn;
@@ -54,6 +55,10 @@ namespace AdventureQuest0._1
         {
             this.items.Add(i);
         }
+        public void Addmob(mob i)
+        {
+            this.mobs.Add(i);
+        }
 
 
         public override string ToString()
@@ -67,7 +72,15 @@ namespace AdventureQuest0._1
             if (east != null) s += "Udgang til: " + east.navn + "\n";
             return s;
         }
+        public class mob
+        {
+            public string navn;
+            public int difficulty;
+            public mob(string navn, int difficulty)
+            {
+                this.navn = navn;
+                this.difficulty = difficulty;
+            }
 
-
-    }
+        }
 }
