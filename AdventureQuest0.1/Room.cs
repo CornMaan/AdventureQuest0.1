@@ -39,6 +39,17 @@ namespace AdventureQuest0._1
         {
             east = r;
         }
+        public void Listmobs()
+        {
+            if (mobs.Count > 0)
+            {
+                Console.WriteLine("Du ser : ");
+                foreach (mob i in mobs)
+                {
+                    Console.WriteLine(i.navn);
+                }
+            }
+        }
 
         public void ListItems()
         {

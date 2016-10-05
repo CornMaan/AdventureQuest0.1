@@ -35,8 +35,9 @@ namespace AdventureQuest0._1
             Room r21 = new Room("Mufasa", "Dette er den afsluttende kamp! Slå løven ihjel og skub ham udover klippeskrænten!");
             Room r22 = new Room("Hemmeligt rum", "Mystery shit");
 
-            Item i1 = new Item("Dagger");
+            Item i1 = new Item("Dagger", 32);
             r2.AddItem(i1);
+            
             
             
             rooms.Add(r1);
