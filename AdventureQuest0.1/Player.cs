@@ -10,18 +10,19 @@ namespace AdventureQuest0._1
     {
         public string navn;
         public int hp;
+        public int power;
         public Room currentRoom;
         public List<Klasse> person = new List<Klasse>();
         public List<Item> inventory = new List<Item>(); 
 
         public void Addclass(Klasse c)
         {
-            Klasse.Add(c);
+            person.Add(c);
             switch (curentRoom)
             {
                 case "bambi hjørnet":
                     Console.WriteLine("Du fandt et rensdyr horn under isen, som forvandler dig til et rensdyr");
-
+                    navn = "rensdyr";
                     break;
                 case "De ensomme spøgelser":
                     Console.WriteLine("Efter du dør, bliver du forvandlet til et Ensomt spøgelse");
@@ -66,12 +67,21 @@ namespace AdventureQuest0._1
                 Console.WriteLine("Du samlede en Honning krukke op fra peterplys lig. Honning krukken healer dig for 20hp når du bruger den");
 
             }
+            else
+            {
+                Console.WriteLine("Der er gået noget galt hvis det her står her!");
+            }
         }
     }
 
     public class Item
     {
         public string navn;
+        public Item(string navn)
+        {
+            this.navn = navn;
+            itempower =
+        }
     }
     public class Klasse
     {

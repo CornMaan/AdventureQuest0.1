@@ -14,7 +14,7 @@ namespace AdventureQuest0._1
         public Room east;
         public string navn;
         public string beskrivelse;
-
+        public List<Item> items;
         public Room(string navn, string beskrivelse)
         {
             this.navn = navn;
@@ -38,6 +38,23 @@ namespace AdventureQuest0._1
         {
             east = r;
         }
+
+        public void ListItems()
+        {
+            if(items.Count > 0)
+            {
+                Console.WriteLine("Du ser : ");
+                foreach (Item i in items)
+                {
+                    Console.WriteLine(i.navn);
+                }
+            }
+        }
+        public void AddItem(Item i)
+        {
+            this.items.Add(i);
+        }
+
 
         public override string ToString()
         {
