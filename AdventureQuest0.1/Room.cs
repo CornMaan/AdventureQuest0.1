@@ -15,7 +15,8 @@ namespace AdventureQuest0._1
         public string navn;
         public string beskrivelse;
         public List<Item> items;
-        public List<mob> mobs;
+        public List<Mob> mobs;
+        public List<Mob> fjernder = new List<Mob>();
         public Room(string navn, string beskrivelse)
         {
             this.navn = navn;
@@ -44,7 +45,7 @@ namespace AdventureQuest0._1
             if (mobs.Count > 0)
             {
                 Console.WriteLine("Du ser : ");
-                foreach (mob i in mobs)
+                foreach (Mob i in mobs)
                 {
                     Console.WriteLine(i.navn);
                 }
@@ -66,7 +67,7 @@ namespace AdventureQuest0._1
         {
             this.items.Add(i);
         }
-        public void Addmob(mob i)
+        public void AddMob(Mob i)
         {
             this.mobs.Add(i);
         }
@@ -83,16 +84,20 @@ namespace AdventureQuest0._1
             if (east != null) s += "Udgang til: " + east.navn + "\n";
             return s;
         }
-        public class mob
+        public class Mob
         {
             public string navn;
             public int difficulty;
-            public mob(string navn, int difficulty)
+            public Mob(string navn, int difficulty)
             {
                 this.navn = navn;
                 this.difficulty = difficulty;
             }
 
+        }
+        public void AddMob(Mob i)
+        {
+            fjernder.Add(i);
         }
     }
 }

@@ -19,7 +19,7 @@ namespace AdventureQuest0._1
             Room r5 = new Room("Sasquatch dungeon", "Pas på den farlige sasquatch.");
             Room r6 = new Room("Dream room", "Vent 10 sekunder og få et item.");
             Room r7 = new Room("De ensomme spøgelser", "Dø her og bliv til et ensomt spøgelse.");
-            Room r8 = new Room("De lillae blomsters eng", "Vent her og få en kiste.");
+            Room r8 = new Room("De lilla blomsters eng", "Vent her og få en kiste.");
             Room r9 = new Room("Preperation room", "Du har nu fuldt liv.");
             Room r10 = new Room("Blue eyes white dragon!", "Slå dragen ihjel og kom videre til næste level!");
             Room r11 = new Room("Room of death", "GÅ HERIND DRENGE!");
@@ -37,7 +37,8 @@ namespace AdventureQuest0._1
 
             Item i1 = new Item("Dagger", 32);
             r2.AddItem(i1);
-           
+
+            
             
             rooms.Add(r1);
             rooms.Add(r2);
