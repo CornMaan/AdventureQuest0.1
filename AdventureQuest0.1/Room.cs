@@ -83,16 +83,21 @@ namespace AdventureQuest0._1
             if (east != null) s += "Udgang til: " + east.navn + "\n";
             return s;
         }
-        public class Mob
-        {
-            public string navn;
-            public int difficulty;
-            public Mob(string navn, int difficulty)
-            {
-                this.navn = navn;
-                this.difficulty = difficulty;
-            }
 
+
+
+
+    }
+
+    public class Mob
+    {
+        public string navn;
+        public int difficulty;
+        public Mob(string navn, int difficulty)
+        {
+            this.navn = navn;
+            this.difficulty = difficulty;
         }
+
     }
 }
