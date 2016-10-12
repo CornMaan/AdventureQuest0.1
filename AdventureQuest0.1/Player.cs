@@ -15,17 +15,9 @@ namespace AdventureQuest0._1
         public List<Item> inventory = new List<Item>();
         public string skabelse;
 
-        public void Addclass(Klasse c)
-        {
-            skabelse = c;
-        }
         public void AddItem(Item i)
         {
             inventory.Add(i);
         }
-    }
-    public class Klasse
-    {
-        public string navn;
     }
 }

@@ -59,6 +59,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Item.cs" />
+    <Compile Include="Klasse.cs" />
     <Compile Include="Mob.cs" />
     <Compile Include="World.cs" />
     <Compile Include="Room.cs" />
