@@ -36,6 +36,7 @@ namespace AdventureQuest0._1
             Room r22 = new Room("Hemmeligt rum", "Mystery shit");
 
             Item i1 = new Item("Dagger", 32);
+            Item i2 = new Item
             r2.AddItem(i1);
 
             Mob s1 = new Mob("De vilde kaniners hule", 1);

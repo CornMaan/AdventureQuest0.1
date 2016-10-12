@@ -24,17 +24,6 @@ namespace AdventureQuest0._1
             inventory.Add(i);
         }
     }
-
-    public class Item
-    {
-        public string navn;
-        public int itempower;
-        public Item(string navn, int itempower)
-        {
-            this.navn = navn;
-            this.itempower = itempower;
-        }
-    }
     public class Klasse
     {
         public string navn;

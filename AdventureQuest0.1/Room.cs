@@ -88,16 +88,4 @@ namespace AdventureQuest0._1
 
 
     }
-
-    public class Mob
-    {
-        public string navn;
-        public int difficulty;
-        public Mob(string navn, int difficulty)
-        {
-            this.navn = navn;
-            this.difficulty = difficulty;
-        }
-
-    }
 }
