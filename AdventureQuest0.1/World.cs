@@ -13,7 +13,7 @@ namespace AdventureQuest0._1
         {
             rooms = new List<Room>();
             Room r1 = new Room("Spawn", "Dette er starten på et eventyr");
-            Room r2 = new Room("Bambi hjørnet", "Vent 8 sekunder og få et rensdyrhorn, som forvandler dig til et rensdyr.");
+            Room r2 = new Room("Bambi hjørnet", "Vent 8 sekunder og få et rensdyrhorn, som forvandler dig til et rensdyr. I mens slår vi bambis mor ihjel, fuck dig.");
             Room r3 = new Room("De vilde kaniners hule", "Pas på de vilde og farlige kaniner.");
             Room r4 = new Room("Spooky scary skeletons", "Hvis du dør her bliver du til en spooky scary skeleton.");
             Room r5 = new Room("Sasquatch dungeon", "Pas på den farlige sasquatch.");
