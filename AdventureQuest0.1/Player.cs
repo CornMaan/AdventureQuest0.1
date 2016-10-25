@@ -11,7 +11,7 @@ namespace AdventureQuest0._1
         public string navn;
         public int hp;
         public int power;
-        public Room currentRoom;
+        public Room CurrentRoom;
         public List<Item> inventory = new List<Item>();
         public string skabelse;
 

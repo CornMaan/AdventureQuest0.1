@@ -10,7 +10,7 @@ namespace AdventureQuest0._1
     {
         static void Main(string[] args)
         {
-            World w = new World();
+            WorldGenerator w = new WorldGenerator();
             w.PrintWorld();
             Console.ReadLine();
          
