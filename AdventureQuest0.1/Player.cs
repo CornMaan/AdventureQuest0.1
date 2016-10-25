@@ -12,29 +12,12 @@ namespace AdventureQuest0._1
         public int hp;
         public int power;
         public Room currentRoom;
-        public List<Item> inventory = new List<Item>(); 
+        public List<Item> inventory = new List<Item>();
+        public string skabelse;
 
-        public void Addclass(Klasse c)
-        {
-        }
         public void AddItem(Item i)
         {
             inventory.Add(i);
         }
-    }
-
-    public class Item
-    {
-        public string navn;
-        public int itempower;
-        public Item(string navn, int itempower)
-        {
-            this.navn = navn;
-            this.itempower = itempower;
-        }
-    }
-    public class Klasse
-    {
-        public string navn;
     }
 }
