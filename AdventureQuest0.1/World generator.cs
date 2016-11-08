@@ -39,7 +39,8 @@ namespace AdventureQuest0._1
             Item i2 = new Item
             r2.AddItem(i1);
 
-            Mob s1 = new Mob("De vilde kaniners hule", 1);
+            Mob m1 = new Mob("De vilde kaniners hule", 1);
+            Mob m2 = new Mob("");
 
 
             rooms.Add(r1);
