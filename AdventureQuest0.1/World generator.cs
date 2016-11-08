@@ -100,35 +100,5 @@ namespace AdventureQuest0._1
                 Console.WriteLine(r.ToString());
             }
         }
-        public void HandleInput()
-        {
-            bool isRunning = true;
-            while(isRunning)
-            {
-                string input = Console.ReadLine();
-                if(input.ToLower().Equals("exit") || input.ToLower().Equals("e"))
-                {
-                    isRunning = false;
-                }
-                else
-                {
-                    HandleMovement();
-                }
-            }
-
-        }
-
-        private void HandleMovement()
-        {
-            char c = Console.ReadKey(true).KeyChar;
-            switch (c)
-            {
-                case 'w':
-                    Player.currentRoom = currentRoom.Addnorth;
-                    break;
-                default:
-                    break;
-            }
-        }
     }
 }
