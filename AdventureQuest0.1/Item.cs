@@ -11,11 +11,13 @@ namespace AdventureQuest0._1
         public string navn;
         public int itempower;
         public string klasse;
+        public string potion;
         public Item(string navn, int itempower, string klasse)
         {
             this.navn = navn;
             this.itempower = itempower;
             this.klasse = klasse;
         }
+
     }
 }
