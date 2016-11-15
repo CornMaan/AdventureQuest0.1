@@ -11,7 +11,6 @@ namespace AdventureQuest0._1
         public string navn;
         public int itempower;
         public string klasse;
-        public string potion;
         public Item(string navn, int itempower, string klasse)
         {
             this.navn = navn;
@@ -19,5 +18,31 @@ namespace AdventureQuest0._1
             this.klasse = klasse;
         }
 
+    }
+    public class potion
+    {
+        int number = 5;
+        int hp = 60;
+        public void takepotion(Player p)
+        {
+            Console.WriteLine("Are you sure you want to take a potion?");
+            string input = Console.ReadLine();
+            if (input.ToLower().Equals("yes") || input.ToLower().Equals("y"))
+            {
+                if (number == 0)
+                {
+                    Console.WriteLine("You don't have any potions left");
+                }
+                else
+                {
+                    Console.WriteLine("You take a potion");
+                    p.hp = p.hp + hp;
+                    if (p.hp < 200)
+                    {
+                        p.hp = 200;
+                    }
+                }
+            }
+        }
     }
 }
