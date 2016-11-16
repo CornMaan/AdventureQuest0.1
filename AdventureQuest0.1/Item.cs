@@ -11,11 +11,13 @@ namespace AdventureQuest0._1
         public string navn;
         public int itempower;
         public string klasse;
-        public Item(string navn, int itempower, string klasse)
+        public int hp;
+        public Item(string navn, int itempower, string klasse, int hp)
         {
             this.navn = navn;
             this.itempower = itempower;
             this.klasse = klasse;
+            this.hp = hp;
         }
 
     }
@@ -37,9 +39,9 @@ namespace AdventureQuest0._1
                 {
                     Console.WriteLine("You take a potion");
                     p.hp = p.hp + hp;
-                    if (p.hp < 200)
+                    if (p.hp < p.maxhp)
                     {
-                        p.hp = 200;
+                        p.hp = p.maxhp;
                     }
                 }
             }

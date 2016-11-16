@@ -10,6 +10,7 @@ namespace AdventureQuest0._1
     {
         public string navn;
         public int hp;
+        public int maxhp;
         public int power;
         public Room CurrentRoom;
         public List<Item> inventory = new List<Item>();
@@ -27,22 +28,24 @@ namespace AdventureQuest0._1
             {
                 inventory.Add(i);
                 p.power = p.power + i.itempower;
+                p.maxhp = p.maxhp + i.hp;
+                p.hp = p.hp + i.hp;
             }
             else
             {
                 Console.WriteLine("You can not use this item, because of your class");
             }
         }
-        public void addmob (Mob m)
-        {
-            battle.Add(m);
-        }
-        public void Addclass(Klasse k, Player p)
+        public void AddKlasse(Klasse k, Player p)
         {
             if (p.klasse.Equals(klasse))
             {
                 p.klasse = k.navn;
+                p.power = p.power + k.klassepower;
+                p.maxhp = p.maxhp + k.hp;
+                p.hp = p.hp + k.hp;
             }
         }
+
     }
 }
