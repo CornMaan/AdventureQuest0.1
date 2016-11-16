@@ -93,6 +93,18 @@ namespace AdventureQuest0._1
 
         }
 
+        public Room GetRoom(string navn)
+        {
+            
+            foreach (Room r in rooms)
+            {
+                if(r.navn.Equals(navn))
+                {
+                    return r;
+                }
+            }
+            return null;
+        }
         public void PrintWorld()
         {
             foreach (Room r in rooms)

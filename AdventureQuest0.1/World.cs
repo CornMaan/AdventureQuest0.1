@@ -10,7 +10,12 @@ namespace AdventureQuest0._1
     {
         Player player = new Player();
         potion po = new potion();
-        
+        WorldGenerator generator = new WorldGenerator();
+
+        public World()
+        {
+            player.CurrentRoom = generator.GetRoom("Spawn");
+        }
         public void HandleInput()
         {
             bool isRunning = true;
