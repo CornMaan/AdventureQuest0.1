@@ -40,6 +40,10 @@ namespace AdventureQuest0._1
             Item i3 = new Item("123", 0, SSS);
             Item i4 = new Item("1234", 0, Spøgelse);
             r2.AddItem(i1);
+            r4.AddItem(i3);
+            r6.AddItem(i2);
+            r7.AddItem(i4);
+            
 
             Mob m1 = new Mob("De vilde kaniners hule", 1, 2, 2);
             Mob m2 = new Mob("");
