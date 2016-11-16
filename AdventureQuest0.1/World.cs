@@ -8,7 +8,7 @@ namespace AdventureQuest0._1
 {
     class World
     {
-        Player player = new Player();
+        public Player player = new Player();
         potion po = new potion();
         WorldGenerator generator = new WorldGenerator();
 
@@ -54,5 +54,6 @@ namespace AdventureQuest0._1
                     break;
             }
         }
+        battle
     }
 }
