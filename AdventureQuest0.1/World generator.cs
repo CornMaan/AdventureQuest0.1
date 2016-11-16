@@ -35,8 +35,10 @@ namespace AdventureQuest0._1
             Room r21 = new Room("Mufasa", "Dette er den afsluttende kamp! Slå løven ihjel og skub ham udover klippeskrænten!");
             Room r22 = new Room("Hemmeligt rum", "Mystery shit");
 
-            Item i1 = new Item("Dagger", 32);
-            Item i2 = new Item
+            Item i1 = new Item("Rensdyrhorn", 0, Rensdyr);
+            Item i2 = new Item("Staff of truth", 0, Warlock);
+            Item i3 = new Item("123", 0, SSS);
+            Item i4 = new Item("1234", 0, Spøgelse);
             r2.AddItem(i1);
 
             Mob m1 = new Mob("De vilde kaniners hule", 1, 2, 2);
