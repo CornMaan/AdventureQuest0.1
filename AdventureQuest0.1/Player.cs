@@ -24,6 +24,11 @@ namespace AdventureQuest0._1
         public void AddItem(Item i)
         {
             inventory.Add(i);
+            Item.
+        }
+        public void addmob (Mob m)
+        {
+            battle.Add(m);
         }
     }
 }
