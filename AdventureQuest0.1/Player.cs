@@ -21,14 +21,28 @@ namespace AdventureQuest0._1
             this.power = 1;
         }
 
-        public void AddItem(Item i)
+        public void AddItem(Item i, Player p)
         {
-            inventory.Add(i);
-            Item.
+            if (p.klasse.Equals(i.klasse))
+            {
+                inventory.Add(i);
+                p.power = p.power + i.itempower;
+            }
+            else
+            {
+                Console.WriteLine("You can not use this item, because of your class");
+            }
         }
         public void addmob (Mob m)
         {
             battle.Add(m);
+        }
+        public void Addclass(Klasse k, Player p)
+        {
+            if (p.klasse.Equals(klasse))
+            {
+                p.klasse = k.navn;
+            }
         }
     }
 }
