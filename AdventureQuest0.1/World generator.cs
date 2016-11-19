@@ -35,13 +35,13 @@ namespace AdventureQuest0._1
             Room r21 = new Room("Mufasa", "Dette er den afsluttende kamp! Slå løven ihjel og skub ham udover klippeskrænten!");
             Room r22 = new Room("Hemmeligt rum", "Mystery shit");
 
-            Item i1 = new Item("Dagger", 32);
-            Item i2 = new Item
+            Item i1 = new Item("Dagger", 32, 2, 3);
+            Item i2 = new Item();
             r2.AddItem(i1);
 
             Mob m1 = new Mob("De vilde kaniners hule", 1, 2, 2);
             Mob m2 = new Mob("");
-            r2.addmob(m2)
+            r2.addmob(m2);
 
             rooms.Add(r1);
             rooms.Add(r2);

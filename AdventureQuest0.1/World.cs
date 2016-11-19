@@ -8,7 +8,8 @@ namespace AdventureQuest0._1
 {
     class World
     {
-        public Player player = new Player();
+        Player player = new Player();
+        PlayerHandler playerhandle = new PlayerHandler();
         potion po = new potion();
         WorldGenerator generator = new WorldGenerator();
 
@@ -38,22 +39,25 @@ namespace AdventureQuest0._1
             switch (input)
             {
                 case 'w':
-                    player.CurrentRoom = player.CurrentRoom.north;
+                    playerhandle.MoveUp(player, generator.GetRoom(player.CurrentRoom.ToString()));
                     break;
                 case 's':
-                    player.CurrentRoom = player.CurrentRoom.south;
+                    playerhandle.MoveDown(player);
                     break;
                 case 'd':
-                    player.CurrentRoom = player.CurrentRoom.east;
+                    playerhandle.MoveRight(player);
                     break;
                 case 'a':
-                    player.CurrentRoom = player.CurrentRoom.west;
+                    playerhandle.MoveLeft(player);
                     break;
                 case 'p':
                     po.takepotion(player);
                     break;
             }
         }
-        battle
+        public void battle()
+        {
+
+        } 
     }
 }

@@ -22,28 +22,18 @@ namespace AdventureQuest0._1
             this.power = 1;
         }
         // problem at skulle kalde player i world generator klassen fordi playeren bliver oprettet i world
-        public void AddItem(Item i, Player p)
+        public void AddItem(Item i)
         {
-            if (p.klasse.Equals(i.klasse))
-            {
-                inventory.Add(i);
-                p.power = p.power + i.itempower;
-                p.maxhp = p.maxhp + i.hp;
-                p.hp = p.hp + i.hp;
-            }
-            else
-            {
-                Console.WriteLine("You can not use this item, because of your class");
-            }
+            inventory.Add(i);
         }
         public void AddKlasse(Klasse k, Player p)
         {
             if (p.klasse.Equals(klasse))
             {
                 p.klasse = k.navn;
-                p.power = p.power + k.klassepower;
-                p.maxhp = p.maxhp + k.hp;
-                p.hp = p.hp + k.hp;
+                p.power += k.klassepower;
+                p.maxhp += k.hp;
+                p.hp += k.hp;
             }
         }
 

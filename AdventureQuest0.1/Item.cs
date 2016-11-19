@@ -38,7 +38,7 @@ namespace AdventureQuest0._1
                 else
                 {
                     Console.WriteLine("You take a potion");
-                    p.hp = p.hp + hp;
+                    p.hp += hp;
                     if (p.hp < p.maxhp)
                     {
                         p.hp = p.maxhp;
@@ -46,5 +46,9 @@ namespace AdventureQuest0._1
                 }
             }
         }
+    }
+    public class itemhandler
+    {
+        
     }
 }

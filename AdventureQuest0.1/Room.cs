@@ -51,7 +51,7 @@ namespace AdventureQuest0._1
             }
         }
 
-        public void ListItems()
+        public void GetItems(Player p)
         {
             if (items.Count > 0)
             {
@@ -59,6 +59,17 @@ namespace AdventureQuest0._1
                 foreach (Item i in items)
                 {
                     Console.WriteLine(i.navn);
+                    if (p.klasse.Equals(i.klasse))
+                    {
+                        p.power += i.itempower;
+                        p.maxhp += i.hp;
+                        p.hp += i.hp;
+                    }
+                    else
+                    {
+                        Console.WriteLine("You can not use this item, because of your class");
+                    }
+                    
                 }
             }
         }
