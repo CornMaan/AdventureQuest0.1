@@ -10,7 +10,7 @@ namespace AdventureQuest0._1
     {
         Player player = new Player();
         PlayerHandler playerhandle = new PlayerHandler();
-        potion po = new potion();
+        Potion po = new Potion();
         WorldGenerator generator = new WorldGenerator();
 
         public World()

@@ -35,10 +35,10 @@ namespace AdventureQuest0._1
             Room r21 = new Room("Mufasa", "Dette er den afsluttende kamp! Slå løven ihjel og skub ham udover klippeskrænten!");
             Room r22 = new Room("Hemmeligt rum", "Mystery shit");
 
-            Item i1 = new Item("Rensdyrhorn", 0, Rensdyr);
-            Item i2 = new Item("Staff of truth", 0, Warlock);
-            Item i3 = new Item("123", 0, SSS);
-            Item i4 = new Item("1234", 0, Spøgelse);
+            Item i1 = new Item("Rensdyrhorn", 0, "Rensdyr", 1);
+            Item i2 = new Item("Staff of truth", 0, "Warlock", 1);
+            Item i3 = new Item("123", 0, "SSS", 1);
+            Item i4 = new Item("1234", 0, "Spøgelse", 1);
             r2.AddItem(i1);
             r4.AddItem(i3);
             r6.AddItem(i2);
@@ -46,8 +46,7 @@ namespace AdventureQuest0._1
             
 
             Mob m1 = new Mob("De vilde kaniners hule", 1, 2, 2);
-            Mob m2 = new Mob("");
-            r2.addmob(m2)
+            r2.AddMob(m1);
 
             rooms.Add(r1);
             rooms.Add(r2);
