@@ -16,10 +16,12 @@ namespace AdventureQuest0._1
         public string beskrivelse;
         public List<Item> items;
         public List<Mob> mobs;
+        public int potion;
         public Room(string navn, string beskrivelse)
         {
             this.navn = navn;
             this.beskrivelse = beskrivelse;
+            this.potion = 0;
         }
 
         public void AddNorth(Room r)
@@ -44,9 +46,9 @@ namespace AdventureQuest0._1
             if (mobs.Count > 0)
             {
                 Console.WriteLine("Du ser : ");
-                foreach (Mob i in mobs)
+                foreach (Mob m in mobs)
                 {
-                    Console.WriteLine(i.navn);
+                    Console.WriteLine(m.navn);
                 }
             }
         }
@@ -61,6 +63,7 @@ namespace AdventureQuest0._1
                     Console.WriteLine(i.navn);
                     if (p.klasse.Equals(i.klasse))
                     {
+                        Console.WriteLine("You equipped" + i.navn);
                         p.power += i.itempower;
                         p.maxhp += i.hp;
                         p.hp += i.hp;
@@ -73,6 +76,14 @@ namespace AdventureQuest0._1
                 }
             }
         }
+        public void GetPotions(Potion po)
+        {
+            if (potion > 0)
+            {
+                Console.WriteLine("Du samler: " + potion + "potions op");
+                po.number += potion;
+            }
+        }
         public void AddItem(Item i)
         {
             this.items.Add(i);
@@ -81,7 +92,10 @@ namespace AdventureQuest0._1
         {
             this.mobs.Add(i);
         }
-
+        public void Addpotion(potion po)
+        {
+            this.potions.Add(po);
+        }
 
         public override string ToString()
         {
@@ -94,9 +108,5 @@ namespace AdventureQuest0._1
             if (east != null) s += "Udgang til: " + east.navn + "\n";
             return s;
         }
-
-
-
-
     }
 }

@@ -39,16 +39,16 @@ namespace AdventureQuest0._1
             switch (input)
             {
                 case 'w':
-                    playerhandle.MoveUp(player, generator.GetRoom(player.CurrentRoom.ToString()));
+                    playerhandle.MoveUp(player, generator.GetRoom(player.CurrentRoom.ToString()), po);
                     break;
                 case 's':
-                    playerhandle.MoveDown(player, generator.GetRoom(player.CurrentRoom.ToString()));
+                    playerhandle.MoveDown(player, generator.GetRoom(player.CurrentRoom.ToString()), po);
                     break;
                 case 'd':
-                    playerhandle.MoveRight(player, generator.GetRoom(player.CurrentRoom.ToString()));
+                    playerhandle.MoveRight(player, generator.GetRoom(player.CurrentRoom.ToString()), po);
                     break;
                 case 'a':
-                    playerhandle.MoveLeft(player, generator.GetRoom(player.CurrentRoom.ToString()));
+                    playerhandle.MoveLeft(player, generator.GetRoom(player.CurrentRoom.ToString()), po);
                     break;
                 case 'p':
                     po.takepotion(player);

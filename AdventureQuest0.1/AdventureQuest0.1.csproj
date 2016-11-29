@@ -62,6 +62,7 @@
     <Compile Include="Klasse.cs" />
     <Compile Include="Mob.cs" />
     <Compile Include="PlayerHandler.cs" />
+    <Compile Include="Potion.cs" />
     <Compile Include="World generator.cs" />
     <Compile Include="Room.cs" />
     <Compile Include="Player.cs" />
