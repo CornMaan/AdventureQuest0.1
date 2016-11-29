@@ -92,9 +92,9 @@ namespace AdventureQuest0._1
         {
             this.mobs.Add(i);
         }
-        public void Addpotion(potion po)
+        public void Addpotion()
         {
-            this.potions.Add(po);
+            this.potion += 1;
         }
 
         public override string ToString()
