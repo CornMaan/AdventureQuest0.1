@@ -12,19 +12,25 @@ namespace AdventureQuest0._1
         {
             p.CurrentRoom = p.CurrentRoom.north;
             r.GetItems(p);
-            r.ListMobs();
+            r.BattleMobs();
         }
-        public void MoveDown(Player p)
+        public void MoveDown(Player p, Room r)
         {
             p.CurrentRoom = p.CurrentRoom.south;
+            r.GetItems(p);
+            r.BattleMobs();
         }
-        public void MoveRight(Player p)
+        public void MoveRight(Player p, Room r)
         {
             p.CurrentRoom = p.CurrentRoom.east;
+            r.GetItems(p);
+            r.BattleMobs();
         }
-        public void MoveLeft(Player p)
+        public void MoveLeft(Player p, Room r)
         {
             p.CurrentRoom = p.CurrentRoom.west;
+            r.GetItems(p);
+            r.BattleMobs();
         }
     }
 }

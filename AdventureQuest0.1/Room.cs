@@ -39,7 +39,7 @@ namespace AdventureQuest0._1
         {
             east = r;
         }
-        public void ListMobs()
+        public void BattleMobs()
         {
             if (mobs.Count > 0)
             {

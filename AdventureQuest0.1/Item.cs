@@ -47,8 +47,4 @@ namespace AdventureQuest0._1
             }
         }
     }
-    public class itemhandler
-    {
-        
-    }
 }

@@ -42,13 +42,13 @@ namespace AdventureQuest0._1
                     playerhandle.MoveUp(player, generator.GetRoom(player.CurrentRoom.ToString()));
                     break;
                 case 's':
-                    playerhandle.MoveDown(player);
+                    playerhandle.MoveDown(player, generator.GetRoom(player.CurrentRoom.ToString()));
                     break;
                 case 'd':
-                    playerhandle.MoveRight(player);
+                    playerhandle.MoveRight(player, generator.GetRoom(player.CurrentRoom.ToString()));
                     break;
                 case 'a':
-                    playerhandle.MoveLeft(player);
+                    playerhandle.MoveLeft(player, generator.GetRoom(player.CurrentRoom.ToString()));
                     break;
                 case 'p':
                     po.takepotion(player);
