@@ -134,16 +134,18 @@ namespace AdventureQuest0._1
                             int randomnumber = random.Next(1, 3);
                             int playerdamage = randomnumber * p.power;
                             m.hp -= playerdamage;
-                            Console.WriteLine("You dealt " + playerdamage + " to " + m.navn);
+                            Console.WriteLine("You dealt " + playerdamage + " damage to " + m.navn);
                             if (m.hp <= 0)
                             {
                                 mobisalive = false;
                             }
+
                             int randomnumber2 = random.Next(1, 3);
                             int mobdamage = randomnumber2 * m.attack;
                             p.hp -= mobdamage;
-                            
+                            Console.WriteLine("You took " + mobdamage + " damage");
                             break;
+
                         case 'p':
                             po.takepotion(p);
                             break;
