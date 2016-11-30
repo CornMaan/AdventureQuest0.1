@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AdventureQuest0._1
 {
-    class World
+    public class World
     {
         Player player = new Player();
         PlayerHandler playerhandle = new PlayerHandler();
@@ -27,6 +27,12 @@ namespace AdventureQuest0._1
                 {
                     isRunning = false;
                 }
+                else if (player.hp <= 0)
+                {
+                    Console.WriteLine("You died");
+                    Console.WriteLine("The game will now be closed");
+                    isRunning = false;
+                }
                 else
                 {
                     HandleMovement();
@@ -39,25 +45,21 @@ namespace AdventureQuest0._1
             switch (input)
             {
                 case 'w':
-                    playerhandle.MoveUp(player, player.CurrentRoom, po);
+                    playerhandle.MoveUp(player, player.CurrentRoom, po, generator);
                     break;
                 case 's':
-                    playerhandle.MoveDown(player, player.CurrentRoom, po);
+                    playerhandle.MoveDown(player, player.CurrentRoom, po, generator);
                     break;
                 case 'd':
-                    playerhandle.MoveRight(player, player.CurrentRoom, po);
+                    playerhandle.MoveRight(player, player.CurrentRoom, po, generator);
                     break;
                 case 'a':
-                    playerhandle.MoveLeft(player, player.CurrentRoom, po);
+                    playerhandle.MoveLeft(player, player.CurrentRoom, po, generator);
                     break;
                 case 'p':
                     po.takepotion(player);
                     break;
             }
         }
-        public void battle()
-        {
-
-        } 
     }
 }

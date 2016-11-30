@@ -118,5 +118,39 @@ namespace AdventureQuest0._1
                 Console.WriteLine(r.ToString());
             }
         }
+        public void battle(Mob m, Player p, Potion po)
+        {
+            Console.WriteLine("You are now in battle with" + m.navn);
+            Console.WriteLine("a to attack, p to take potion");
+            char input = Console.ReadKey(true).KeyChar;
+            {
+                bool mobisalive = true;
+                while (mobisalive)
+                {
+                switch(input)
+                    {
+                        case 'a':
+                            Random random = new Random();
+                            int randomnumber = random.Next(1, 3);
+                            int playerdamage = randomnumber * p.power;
+                            m.hp -= playerdamage;
+                            Console.WriteLine("You dealt " + playerdamage + " to " + m.navn);
+                            if (m.hp <= 0)
+                            {
+                                mobisalive = false;
+                            }
+                            int randomnumber2 = random.Next(1, 3);
+                            int mobdamage = randomnumber2 * m.attack;
+                            p.hp -= mobdamage;
+                            
+                            break;
+                        case 'p':
+                            po.takepotion(p);
+                            break;
+                    }
+                }
+                
+            }
+        }
     }
 }

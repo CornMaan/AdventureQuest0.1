@@ -36,6 +36,14 @@ namespace AdventureQuest0._1
                 p.hp += k.hp;
             }
         }
+        public void dies()
+        {
+            if (hp <= 0)
+            {
+
+            }
+        }
+
 
     }
 }

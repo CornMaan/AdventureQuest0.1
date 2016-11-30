@@ -41,7 +41,7 @@ namespace AdventureQuest0._1
         {
             east = r;
         }
-        public void BattleMobs()
+        public void BattleMobs(WorldGenerator w, Player p, Potion po)
         {
             if (mobs.Count > 0)
             {
@@ -49,6 +49,7 @@ namespace AdventureQuest0._1
                 foreach (Mob m in mobs)
                 {
                     Console.WriteLine(m.navn);
+                    w.battle(m, p, po);
                 }
             }
         }
