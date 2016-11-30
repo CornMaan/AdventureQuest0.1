@@ -9,6 +9,7 @@ namespace AdventureQuest0._1
     public class WorldGenerator
     {
         List<Room> rooms;
+
         public WorldGenerator()
         {
             rooms = new List<Room>();
