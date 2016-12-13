@@ -12,6 +12,7 @@ namespace AdventureQuest0._1
         {
 
             World w = new World();
+            w.HandleInput();
             Console.ReadLine();
          
         }

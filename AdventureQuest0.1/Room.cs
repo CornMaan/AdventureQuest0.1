@@ -14,6 +14,7 @@ namespace AdventureQuest0._1
         public Room east;
         public string navn;
         public string beskrivelse;
+        public List<Klasse> klasse;
         public List<Item> items;
         public List<Mob> mobs;
         public int potion;
@@ -22,6 +23,9 @@ namespace AdventureQuest0._1
             this.navn = navn;
             this.beskrivelse = beskrivelse;
             this.potion = 0;
+            this.items = new List<Item>();
+            this.mobs = new List<Mob>();
+            this.klasse = new List<Klasse>();
         }
 
         public void AddNorth(Room r)
@@ -50,6 +54,25 @@ namespace AdventureQuest0._1
                 {
                     Console.WriteLine(m.navn);
                     w.battle(m, p, po);
+                }
+            }
+        }
+
+        public void GetKlasse(Player p)
+        {
+            if (klasse.Count > 0)
+            {
+                if (p.klasse == "");
+                {
+                    Console.WriteLine("Du blev forvandlet til en/et ");
+                    foreach (Klasse k in klasse)
+                    {
+                        Console.WriteLine(k.navn);
+                        p.klasse = k.navn;
+                        p.power += k.klassepower;
+                        p.maxhp += k.hp;
+                        p.hp += k.hp;
+                    }
                 }
             }
         }
@@ -97,17 +120,29 @@ namespace AdventureQuest0._1
         {
             this.potion += 1;
         }
-
-        public override string ToString()
+        public void addklasse(Klasse k)
         {
+            this.klasse.Add(k);
+        }
+
+        public void Roomkultur()
+        {
+            string c = "";
+            string n = "";
             string s = "";
-            s += "Navn: " + navn + "\n";
-            s += "Beskrivelse: " + beskrivelse + "\n";
-            if (north != null) s += "Udgang til: " + north.navn + "\n";
-            if (south != null) s += "Udgang til: " + south.navn + "\n";
-            if (west != null) s += "Udgang til: " + west.navn + "\n";
-            if (east != null) s += "Udgang til: " + east.navn + "\n";
-            return s;
+            string w = "";
+            string e = "";
+            c += "Navn: " + navn + "\n";
+            c += "Beskrivelse: " + beskrivelse + "\n";
+            if (north != null) n += "Udgang til op: " + north.navn + "\n";
+            if (south != null) s += "Udgang til ned: " + south.navn + "\n";
+            if (west != null) w += "Udgang til venstre: " + west.navn + "\n";
+            if (east != null) e += "Udgang til højre: " + east.navn + "\n";
+            Console.WriteLine(c);
+            Console.WriteLine(n);
+            Console.WriteLine(s);
+            Console.WriteLine(w);
+            Console.WriteLine(e);
         }
     }
 }

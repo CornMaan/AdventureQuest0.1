@@ -20,13 +20,14 @@ namespace AdventureQuest0._1
         {
             this.hp = 200;
             this.power = 1;
+            this.maxhp = 200;
+            this.klasse = "";
         }
-        // problem at skulle kalde player i world generator klassen fordi playeren bliver oprettet i world
         public void AddItem(Item i)
         {
             inventory.Add(i);
         }
-        public void AddKlasse(Klasse k, Player p)
+        public void AddKlassetoplayer(Klasse k, Player p)
         {
             if (p.klasse.Equals(klasse))
             {

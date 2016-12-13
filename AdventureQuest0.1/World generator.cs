@@ -9,7 +9,7 @@ namespace AdventureQuest0._1
     public class WorldGenerator
     {
         List<Room> rooms;
-
+        List<Klasse> klasses;
         public WorldGenerator()
         {
             rooms = new List<Room>();
@@ -36,6 +36,12 @@ namespace AdventureQuest0._1
             Room r21 = new Room("Mufasa", "Dette er den afsluttende kamp! Slå løven ihjel og skub ham udover klippeskrænten!");
             Room r22 = new Room("Hemmeligt rum", "Mystery shit");
 
+            klasses = new List<Klasse>();
+            Klasse k1 = new Klasse("SSC", 1, 1);
+            Klasse k2 = new Klasse("Ensomt spøgelse", 1, 1);
+            klasses.Add(k1);
+            klasses.Add(k2);
+
             Item i1 = new Item("Rensdyrhorn", 0, "Rensdyr", 1);
             Item i2 = new Item("Staff of truth", 0, "Warlock", 1);
             Item i3 = new Item("123", 0, "SSS", 1);
@@ -48,6 +54,8 @@ namespace AdventureQuest0._1
 
             Mob m1 = new Mob("De vilde kaniners hule", 1, 2, 2);
             r2.AddMob(m1);
+
+            r2.Addpotion();
 
             rooms.Add(r1);
             rooms.Add(r2);
@@ -110,6 +118,24 @@ namespace AdventureQuest0._1
                 }
             }
             return null;
+        }
+        public Klasse FindKlasse(string nav)
+        {
+            foreach (Klasse k in klasses)
+            {
+                if(k.navn.Equals(nav))
+                {
+                    return k;
+                }
+            }
+            return null;
+        }
+        public void Playerklasse(Klasse k, Player p)
+        {
+            p.klasse = k.navn;
+            p.power += k.klassepower;
+            p.maxhp += k.hp;
+            p.hp += k.hp;
         }
         public void PrintWorld()
         {

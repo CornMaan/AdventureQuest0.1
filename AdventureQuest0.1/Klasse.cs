@@ -17,6 +17,5 @@ namespace AdventureQuest0._1
             this.klassepower = klassepower;
             this.hp = hp;
         }
-
     }
 }
